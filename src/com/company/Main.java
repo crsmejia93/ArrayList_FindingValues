@@ -19,6 +19,9 @@ public class Main {
 	    for(Integer val: numbers){
 	        if(val.equals(num)){
 	            System.out.printf("%d is in the ArrayList.\n",val);
+            }else{
+	            System.out.printf("%d is not on the ArrayList.\n",num);
+	            break;
             }
         }
     }
