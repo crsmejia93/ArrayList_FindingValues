@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int count=0;
+        boolean valueFound = false;
         Scanner input = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
 
@@ -18,11 +20,14 @@ public class Main {
 
 	    for(Integer val: numbers){
 	        if(val.equals(num)){
-	            System.out.printf("%d is in the ArrayList.\n",val);
-            }else{
-	            System.out.printf("%d is not on the ArrayList.\n",num);
-	            break;
+	            count++;
+	            valueFound=true;
             }
+        }
+        if(valueFound){
+            System.out.printf("%d was found %d times.\n",num,count);
+        }else{
+            System.out.printf("%d was not found.\n",num);
         }
     }
 }
